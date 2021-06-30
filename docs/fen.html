@@ -1,0 +1,185 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forsyth-Edwards Notation (FEN) &#8212; Sphinx Documentation 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/cloud.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&amp;display=swap" type="text/css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+
+    
+    
+     
+        <script src="_static/jquery.cookie.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.base.js"></script>
+    
+
+    
+     
+        <script src="_static/cloud.js"></script>
+    
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Description of the Code" href="description.html" />
+    <link rel="prev" title="Portable Game Notation(PGN)" href="pgn.html" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="description.html" title="Description of the Code"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="pgn.html" title="Portable Game Notation(PGN)"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Sphinx Documentation 0.1 documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="project.html" accesskey="U">Chess Project</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Forsyth-Edwards Notation (FEN)</a></li> 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="forsyth-edwards-notation-fen">
+<h1>Forsyth-Edwards Notation (FEN)<a class="headerlink" href="#forsyth-edwards-notation-fen" title="Permalink to this headline">¶</a></h1>
+<p>Forsyth–Edwards Notation (FEN) is a standard notation for describing a particular board position of a chess game. The purpose of FEN is to provide all the necessary information to restart a game from a particular position.</p>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>A FEN “record” defines a particular game position, all in one text line and using only the ASCII character set. A FEN record contains six fields. The separator between fields is a space. The fields are:</p>
+<ol class="arabic simple">
+<li><p><strong>Piece placement</strong> (from White’s perspective) Each rank is described, starting with rank 8 and ending with rank 1. Within each rank, each square is described from file (a-h). Each piece is identified by a single letter (pawn = “P”, knight = “N”, bishop = “B”, rook = “R”, queen = “Q” and king = “K”). White pieces are designated using upper-case letters (“PNBRQK”) while black pieces use lowercase (“pnbrqk”). Empty squares are noted using digits 1 through 8 (the number of empty squares), and “/” separates ranks.</p></li>
+<li><p><strong>Active color</strong> “w” means White moves next, “b” means Black moves next.</p></li>
+<li><p><strong>Castling availability</strong> If neither side can castle, this is “-“. Otherwise, this has one or more letters: “K” (White can castle kingside), “Q” (White can castle queenside), “k” (Black can castle kingside), and/or “q” (Black can castle queenside). A move that temporarily prevents castling does not negate this notation.</p></li>
+<li><p><strong>En passant</strong> target square in algebraic notation. If there’s no en passant target square, this is “-“. If a pawn has just made a two-square move, this is the position “behind” the pawn. This is recorded regardless of whether there is a pawn in position to make an en passant capture.[2]</p></li>
+<li><p><strong>Halfmove clock:</strong> This is the number of halfmoves since the last capture or pawn advance. This is used to determine if a draw can be claimed under the fifty-move rule.</p></li>
+<li><p><strong>Fullmove number:</strong> The number of the full move. It starts at 1, and is incremented after Black’s move.</p></li>
+</ol>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1</p>
+<p>For more details regarding FEN click here: <a class="reference external" href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">More on FEN</a></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Forsyth-Edwards Notation (FEN)</a><ul>
+<li><a class="reference internal" href="#definition">Definition</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Previous page</h4>
+    <p class="topless"><a href="pgn.html"
+                          title="Previous page">&larr; Portable Game Notation(PGN)</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Next page</h4>
+    <p class="topless"><a href="description.html"
+                          title="Next page">&rarr; Description of the Code</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/fen.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="description.html" title="Description of the Code"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="pgn.html" title="Portable Game Notation(PGN)"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="index.html">Sphinx Documentation 0.1 documentation</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="project.html" >Chess Project</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Forsyth-Edwards Notation (FEN)</a></li> 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Lingaraj Sahu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
