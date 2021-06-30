@@ -3,7 +3,7 @@
 =====================================================
 
    
-This is my first documentation on Sphinx. I have tried to share about my chess project in this documentation. Hope you like it.
+This is my a documentation on Sphinx. I have tried to share about my chess project in this documentation. Hope you like it.
 
 Contents
 ============
